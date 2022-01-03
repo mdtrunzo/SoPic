@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {useState} from 'react'
 import './App.css';
+import Header from './components/Header';
+import Zoom from './components/Zoom';
+import Footer from './components/Footer';
+import Page from './components/Page';
+import Home from './components/Home';
 
 function App() {
+  const [templateId, setTemplateID] = useState(1)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+       <Header />
+       <Router>
+         <Routes>
+           <Route path='/' element={ <Home />} />
+           <Route path='/app' element={
+             <>
+               <Zoom />
+                <div className="page-template">
+                   <Footer />
+                   <Page id={templateId}/>
+                </div>
+             </>
+           } 
+           />
+        </Routes>
+        </Router>
     </div>
   );
 }

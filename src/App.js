@@ -8,7 +8,8 @@ import Page from './components/Page';
 import Home from './components/Home';
 
 function App() {
-  const [templateId, setTemplateID] = useState(1)
+  // const [templateId, setTemplateID] = useState(1)
+  const [templateId] = useState(1)
 
   return (
     <div className="App" >

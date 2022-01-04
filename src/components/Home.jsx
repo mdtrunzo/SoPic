@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import img1 from '../components/assets/plantillas/home/1.jpg'
 import img2 from '../components/assets/plantillas/home/2.jpg'
 import img3 from '../components/assets/plantillas/home/3.jpg'
-import img4 from '../components/assets/plantillas/home/4.jpg'
+// import img4 from '../components/assets/plantillas/home/4.jpg'
 import HeaderHome from './HeaderHome'
 import { Fade } from 'react-reveal'
 

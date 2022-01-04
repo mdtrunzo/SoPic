@@ -24,7 +24,9 @@ function JuntosSiempre() {
         ]
       })
       const [font, setFont] = useState(14)
+      const [fontLeft, setFontLeft] = useState(50)
       const [fontColor, setFontColor] = useState('#000000')
+      const [fontColorLeft, setFontColorLeft] = useState('#000000')
       const [rotate, setRotate] = useState(0)
       const [headerImg, setHeaderImg] = useState(img1);
 
@@ -35,9 +37,18 @@ function JuntosSiempre() {
       const setFontSizeMinus = () => {
           setFont(font - 1)
       }
+      const setFontSizeFunctionLeft = () => {
+        setFontLeft(fontLeft + 1)
+  }
+  const setFontSizeMinusLeft = () => {
+      setFontLeft(fontLeft - 1)
+  }
       const setFontColorFunction = (e) => {
           setFontColor(e.target.value)
       }
+      const setFontColorFunctionLeft = (e) => {
+        setFontColorLeft(e.target.value)
+    }
       const rotateFunction = (e) => {
           let val = e.target.value
           if(val === '0'){
@@ -66,6 +77,30 @@ function JuntosSiempre() {
       const closeRotateBar = () => {
         const rotateBar = document.getElementById('rotate-bar')
         rotateBar.style.display = 'none'
+      }
+      const showTextColorAndSize = () => {
+        const fontSizeBar = document.getElementById('font-size-bar')
+        const colorSelect = document.getElementById('color-select')
+        fontSizeBar.style.display = 'flex'
+        colorSelect.style.display = 'flex'
+      }
+      const showTextColorAndSizeLeft = () => {
+        const fontSizeBar = document.getElementById('font-size-bar-left')
+        const colorSelect = document.getElementById('color-select-left')
+        fontSizeBar.style.display = 'flex'
+        colorSelect.style.display = 'flex'
+      }
+      const closeTextColorAndSize = () => {
+        const fontSizeBar = document.getElementById('font-size-bar')
+        const colorSelect = document.getElementById('color-select')
+        fontSizeBar.style.display = 'none'
+        colorSelect.style.display = 'none'
+      }
+      const closeTextColorAndSizeLeft = () => {
+        const fontSizeBar = document.getElementById('font-size-bar-left')
+        const colorSelect = document.getElementById('color-select-left')
+        fontSizeBar.style.display = 'none'
+        colorSelect.style.display = 'none'
       }
 
     return (
@@ -100,20 +135,45 @@ function JuntosSiempre() {
                         <img src={item.img3} alt="body-img2" width={230} id={uuidv4()} />                       
                     </div>
               
-                    <div className="texto-div">
-                      <EditText defaultValue={item.span} className="texto" /> 
-                     |<EditText defaultValue={item.text} 
-                     style={{fontSize:font, color:fontColor}} 
-                     /> 
+                   <div className="texto-div-big-section">
+                    <div className="texto-div" onClick={showTextColorAndSizeLeft}>
+                      <div className="first-child" >
+                         <EditText defaultValue={item.span} className="texto"
+                         style={{fontSize:fontLeft, color:fontColorLeft}}
+                         /> 
+                      </div>
+                     </div> 
+                        <p>|</p>
+                     <div onClick={showTextColorAndSize}>   
+                      <div className="second-child" >
+                         <EditText defaultValue={item.text} 
+                         style={{fontSize:font, color:fontColor}} 
+                         /> 
+                     </div>
                     </div>
-                    <div className="font-size-bar letter-size">
+                    </div>
+                    {/* BEGIN SIZE Y COLOR DERECHA */}
+                    <div className="font-size-bar " id="font-size-bar" >
                         <FontAwesomeIcon icon={faMinus} onClick={setFontSizeMinus}/>
                         <p>{font}</p>
                         <FontAwesomeIcon icon={faPlus} onClick={setFontSizeFunction}/>
                     </div>
-                    <div className="color-select">
+                    <div className="color-select" id='color-select'>
+                    <FontAwesomeIcon icon={faTimes} className='close-block' onClick={closeTextColorAndSize}/>
                         <input type="color" name=""  id="colorValue" onChange={setFontColorFunction}/>
                     </div>
+                    {/* END SIZE Y COLOR DERECHA */}
+                     {/* BEGIN SIZE Y COLOR IZQUIERDA */}
+                     <div className="font-size-bar-left" id="font-size-bar-left" >
+                        <FontAwesomeIcon icon={faMinus} onClick={setFontSizeMinusLeft}/>
+                        <p>{fontLeft}</p>
+                        <FontAwesomeIcon icon={faPlus} onClick={setFontSizeFunctionLeft}/>
+                    </div>
+                    <div className="color-select-left" id='color-select-left'>
+                    <FontAwesomeIcon icon={faTimes} className='close-block' onClick={closeTextColorAndSizeLeft}/>
+                        <input type="color" name=""  id="colorValue" onChange={setFontColorFunctionLeft}/>
+                    </div>
+                    {/* END SIZE Y COLOR IZQUIERDA */}
                     </div>
                     </Fade>
                 )

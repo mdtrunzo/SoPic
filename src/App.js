@@ -20,7 +20,7 @@ function App() {
               <Header />
                <Zoom />
                 <div className="page-template">
-                   {/* <Footer /> */}
+                   <Footer />
                    <Page id={templateId}/>
                 </div>
              </>

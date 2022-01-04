@@ -4,6 +4,8 @@ import img1 from '../components/assets/plantillas/home/1.jpg'
 import img2 from '../components/assets/plantillas/home/2.jpg'
 import img3 from '../components/assets/plantillas/home/3.jpg'
 import img4 from '../components/assets/plantillas/home/4.jpg'
+import HeaderHome from './HeaderHome'
+import { Fade } from 'react-reveal'
 
 function Home(props) {
     const [home] = useState({
@@ -23,11 +25,11 @@ function Home(props) {
             "img": `${img3}`,
             "title": 'Nombre'
           },
-          {
-            "id": 4,
-            "img": `${img4}`,
-            "title": 'Juntos Siempre 2'
-          }
+          // {
+          //   "id": 4,
+          //   "img": `${img4}`,
+          //   "title": 'Juntos Siempre 2'
+          // }
         ]
       })
 
@@ -37,7 +39,10 @@ function Home(props) {
     }
 
     return (
+      <>
+      <HeaderHome />
         <div className="home" >
+        <Fade >
         {home.templates.map((item) => {
             return (
               <Link to='/app' >
@@ -48,7 +53,9 @@ function Home(props) {
                </Link>
             )
         })}
+        </Fade>
         </div>
+        </>
     )
 }
 

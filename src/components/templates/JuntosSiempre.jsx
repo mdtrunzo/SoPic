@@ -23,8 +23,8 @@ function JuntosSiempre() {
           }
         ]
       })
-      const [font, setFont] = useState(14)
-      const [fontLeft, setFontLeft] = useState(50)
+      const [font, setFont] = useState(10)
+      const [fontLeft, setFontLeft] = useState(40)
       const [fontColor, setFontColor] = useState('#000000')
       const [fontColorLeft, setFontColorLeft] = useState('#000000')
       const [rotate, setRotate] = useState(0)

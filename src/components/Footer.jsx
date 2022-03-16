@@ -40,6 +40,7 @@ function Footer() {
             <div className="footer">
                 <nav className="navbar-footer">
                 <ul>
+                  <div className="navbar-footer-top">
                     <div className="iconos-menu" onClick={showReplace}>
                       <FontAwesomeIcon icon={faImages} />
                       <li>REEMPLAZAR IMAGEN</li>
@@ -48,6 +49,8 @@ function Footer() {
                       <FontAwesomeIcon icon={faSyncAlt}/>
                       <li>ROTAR IMAGEN</li>
                     </div>
+                    </div>
+                    <div className="navbar-footer-bottom">
                     <div className="iconos-menu" onClick={showLetterSize}>
                       <FontAwesomeIcon icon={faFont}/>
                       <li>TAMAÑO DE LETRA</li>
@@ -55,6 +58,7 @@ function Footer() {
                     <div className="iconos-menu" onClick={showColor}>
                       <FontAwesomeIcon icon={faPaintBrush}/>
                       <li>COLOR DE LETRA</li>
+                    </div>
                     </div>
                 </ul>
                 </nav>

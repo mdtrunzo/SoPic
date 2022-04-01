@@ -1,19 +1,24 @@
 import logo from '../components/assets/logo-blanco.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignOutAlt, faSave, faUndo, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import SaveIcon from '@mui/icons-material/Save';
+import ReplayIcon from '@mui/icons-material/Replay';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import Flip from 'react-reveal/Flip'
+import Avatar from './AvatarImage';
 
 function Header({login}) {
         return (
             <div className="header">
                 <nav className="navbar navbar-left">
                 <ul>
-                    <div className="iconos-menu">
-                      <FontAwesomeIcon icon={faSignOutAlt}/>
-                      <li>SALIR</li>
-                    </div>
+                  <a href="https://sopic.shop">
+                      <div className="iconos-menu">
+                       <ExitToAppIcon />
+                        <li>SALIR</li>
+                      </div>
+                  </a>
                     <div className="iconos-menu" onClick={login}>
-                      <FontAwesomeIcon icon={faSave}/>
+                      <SaveIcon />
                       <li>GUARDAR</li>
                     </div>
                 </ul>
@@ -28,15 +33,16 @@ function Header({login}) {
                 <nav className="navbar navbar-right">
                 <ul>
                     <div className="iconos-menu">
-                      <FontAwesomeIcon icon={faUndo}/>
+                      <ReplayIcon />
                       <li>DESHACER</li>
                     </div>
                     <div className="iconos-menu">
-                      <FontAwesomeIcon icon={faShoppingBag}/>
+                      <ShoppingBagIcon />
                       <li>TERMINAR</li>
                     </div>
                 </ul>
                 </nav>
+               <Avatar />
             </div>
         )
     }

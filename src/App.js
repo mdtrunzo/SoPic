@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Zoom from './components/Zoom';
 import Page from './components/Page';
-import Footer from './components/Footer';
+import Panel from './components/Panel';
 import LoginModal from './components/LoginModal';
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
                <Zoom />
                 <div className="page-template">
                    <Page id={templateId}/>
-                   <Footer />
+                   <Panel />
                    {modal && <LoginModal closeModal={closeModal}/>}
                 </div>
              </>

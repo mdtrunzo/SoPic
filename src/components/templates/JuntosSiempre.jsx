@@ -103,6 +103,8 @@ function JuntosSiempre() {
         colorSelect.style.display = 'none'
       }
 
+
+
     return (
         <div>
             {juntosSiempre.template.map((item) => {
@@ -158,10 +160,10 @@ function JuntosSiempre() {
                         <p>{font}</p>
                         <FontAwesomeIcon icon={faPlus} onClick={setFontSizeFunction}/>
                     </div>
-                    <div className="color-select" id='color-select'>
+                    {/* <div className="color-select" id='color-select'>
                     <FontAwesomeIcon icon={faTimes} className='close-block' onClick={closeTextColorAndSize}/>
                         <input type="color" name=""  id="colorValue" onChange={setFontColorFunction}/>
-                    </div>
+                    </div> */}
                     {/* END SIZE Y COLOR DERECHA */}
                      {/* BEGIN SIZE Y COLOR IZQUIERDA */}
                      <div className="font-size-bar-left" id="font-size-bar-left" >

@@ -6,7 +6,7 @@ import ReplaceImg from './ReplaceImg';
 import LetterSize from './LetterSize';
 import ColorSelect from './ColorSelect';
 
-function Footer() {
+function Panel() {
   const [rotate, showRotateBar] = useState('hidden')
   const [replace, showReplaceBar] = useState('hidden')
   const [letter, showLetterSizeBar] = useState('hidden')
@@ -75,4 +75,4 @@ function Footer() {
         )
     }
 
-export default Footer;
+export default Panel;

@@ -1,14 +1,14 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
 
 function Zoom(){
         return (
 
             <div className="zoom-bar shadow-md">
               <div className="zoom-range">
-              <FontAwesomeIcon icon={faMinus} className="zoom-icon"/>
+              <RemoveIcon className="zoom-icon"/>
                   <input type="range" name="" id="" />
-              <FontAwesomeIcon icon={faPlus} className="zoom-icon"/>
+              <AddIcon className="zoom-icon"/>
               </div>
               <p>ZOOM</p>
             </div>

@@ -8,7 +8,7 @@ import ReplaceImg from './funciones/ReplaceImg'
 import ColorSelect from './funciones/ColorSelect'
 import { useState } from 'react'
 
-function Panel({}) {
+function Panel() {
   const [displayNavbar, setDisplayNavbar] = useState('block')
   const [showReplaceImg, setShowReplaceImg] = useState('none')
   const [showRotateImg, setShowRotateImg] = useState('none')

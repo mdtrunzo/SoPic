@@ -25,7 +25,7 @@ function JuntosSiempre() {
       })
       const [font, setFont] = useState(10)
       const [fontLeft, setFontLeft] = useState(40)
-      const [fontColor, setFontColor] = useState('#000000')
+      // const [fontColor, setFontColor] = useState('#000000')
       const [fontColorLeft, setFontColorLeft] = useState('#000000')
       const [rotate, setRotate] = useState(0)
       const [headerImg, setHeaderImg] = useState(img1);
@@ -43,9 +43,9 @@ function JuntosSiempre() {
   const setFontSizeMinusLeft = () => {
       setFontLeft(fontLeft - 1)
   }
-      const setFontColorFunction = (e) => {
-          setFontColor(e.target.value)
-      }
+      // const setFontColorFunction = (e) => {
+      //     setFontColor(e.target.value)
+      // }
       const setFontColorFunctionLeft = (e) => {
         setFontColorLeft(e.target.value)
     }
@@ -90,12 +90,12 @@ function JuntosSiempre() {
         fontSizeBar.style.display = 'flex'
         colorSelect.style.display = 'flex'
       }
-      const closeTextColorAndSize = () => {
-        const fontSizeBar = document.getElementById('font-size-bar')
-        const colorSelect = document.getElementById('color-select')
-        fontSizeBar.style.display = 'none'
-        colorSelect.style.display = 'none'
-      }
+      // const closeTextColorAndSize = () => {
+      //   const fontSizeBar = document.getElementById('font-size-bar')
+      //   const colorSelect = document.getElementById('color-select')
+      //   fontSizeBar.style.display = 'none'
+      //   colorSelect.style.display = 'none'
+      // }
       const closeTextColorAndSizeLeft = () => {
         const fontSizeBar = document.getElementById('font-size-bar-left')
         const colorSelect = document.getElementById('color-select-left')
@@ -149,7 +149,7 @@ function JuntosSiempre() {
                      <div onClick={showTextColorAndSize}>   
                       <div className="second-child" >
                          <EditText defaultValue={item.text} 
-                         style={{fontSize:font, color:fontColor}} 
+                        //  style={{fontSize:font, color:fontColor}} 
                          /> 
                      </div>
                     </div>

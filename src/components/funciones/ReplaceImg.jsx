@@ -6,8 +6,7 @@ function ReplaceImg({close}) {
         return (
               <div className='replace-img'>
                 <Pulse>
-                  {/* <CollectionsIcon />
-                    <p>REEMPLAZAR IMAGEN</p> */}
+                    <p style={{paddingTop: '10px', color:'#785AFF'}}>Selecciona la imagen <br />que deseas reemplazar</p>
                     <button>SUBIR FOTO</button>
                 </Pulse>
                   <CloseIcon className='close-panel' onClick={close}/>

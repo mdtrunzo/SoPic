@@ -6,9 +6,10 @@ function ColorSelect({close}){
         return (
               <div className='replace-img'>
                 <Pulse>
-                  {/* <BrushIcon />
-                    <p>COLOR LETRA</p> */}
-                    <div className="color-select">
+               {!true ? <p style={{paddingTop: '10px', color:'#785AFF', fontSize:'14px'}}>Selecciona el texto al que <br />deseas cambiarle el color</p> 
+            :
+            (
+                <div className="color-select">
                 <div className="paleta-grid">
                     <div className="purple" style={{background: '#785AFF'}}></div>
                     <div className="pink" style={{background: '#FF99CC'}}></div>
@@ -22,6 +23,8 @@ function ColorSelect({close}){
                     <div className="negro" style={{background: '#000000'}}></div>
                 </div>
             </div>
+            )
+            } 
                 </Pulse>
                   <CloseIcon className='close-panel' onClick={close}/>
               </div>

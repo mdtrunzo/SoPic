@@ -1,6 +1,7 @@
 function Template({children}) {
+
     return (
-        <div>
+        <div> 
             <div className="page">
               {children}
             </div>

@@ -8,13 +8,17 @@ function LetterSize({close}) {
         return (
              <div className='replace-img'>
              <Pulse>
-               {/* <TextIncreaseIcon />
-                 <p>TAMAÑO LETRA</p> */}
-                 <div className='letter-size'>
-                <RemoveIcon />
-                <p>12</p>
-                <AddIcon />
-            </div>
+            {!true ? <p style={{paddingTop: '10px', color:'#785AFF', fontSize:'14px'}}>Selecciona el texto <br />que deseas modificar</p> 
+            :
+            (
+              <div className='letter-size'>
+              <RemoveIcon />
+              <p>12</p>
+              <AddIcon />
+          </div>
+            )
+            }
+                
              </Pulse>
                <CloseIcon className='close-panel' onClick={close}/>
            </div>

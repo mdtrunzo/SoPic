@@ -1,21 +1,47 @@
 import { Avatar } from '@mui/material';
 import Fade from 'react-reveal/Fade';
+import { useContext, useState } from 'react'
+import { StateContext } from '../context/StateProvider'
+import LogoutIcon from '@mui/icons-material/Logout';
+import LoginModal from './LoginModal';
+import {useNavigate} from 'react-router-dom'
 
 function AvatarImage() {
+  const [{ user }, dispatch] = useContext(StateContext)
+  const [showModal, setShowModal] = useState(null)
+  const navigate = useNavigate()
 
+  const showModalClick = () => {
+    setShowModal(true)
+  }
+
+  const closeModal = () => {
+    setShowModal(null)
+  }
   return (
+    <>
     <Fade right>
     <div className='avatar-div'>
       {true ? 
       <Avatar alt="User Profile Image" 
-        src="https://static.vecteezy.com/system/resources/previews/002/275/847/original/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg" 
+        src={user?.photoURL} 
         className='avatar'
           /> 
           : <Avatar 
         />}
-          <p> {true ? `Hola, Matías Trunzo!` : 'Iniciar Sesión'}</p>
+          <p> {user ? (
+            <div className='close-session'>
+               <p>Hola, {user?.displayName}!</p>
+               <p className='iniciar-sesion'><LogoutIcon /></p>
+            </div>
+            ) 
+          : 
+          <p className='iniciar-sesion' onClick={showModalClick}>INICIAR SESION</p>}</p>
     </div>
+
     </Fade>
+    {showModal && <LoginModal closeModal={closeModal}/>}
+    </>
   )
 }
 

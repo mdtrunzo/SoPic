@@ -6,7 +6,7 @@ import { useContext, useState } from 'react'
 import { StateContext } from '../context/StateProvider'
 
 function LoginModal({closeModal}) {
-  const [{}, dispatch] = useContext(StateContext)
+  const [{user}, dispatch] = useContext(StateContext)
   const [modal, setModal] = useState(null)
 
   const logIn = () => {
@@ -17,6 +17,7 @@ function LoginModal({closeModal}) {
                 user: result.user
             })
             setModal('close-modal-window')
+            console.log(user)
         })
         .catch(err => console.log(err.message))
   }

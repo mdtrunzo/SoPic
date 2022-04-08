@@ -4,12 +4,10 @@ import { useContext, useState } from 'react'
 import { StateContext } from '../context/StateProvider'
 import LogoutIcon from '@mui/icons-material/Logout';
 import LoginModal from './LoginModal';
-import {useNavigate} from 'react-router-dom'
 
 function AvatarImage() {
-  const [{ user }, dispatch] = useContext(StateContext)
+  const [{ user }] = useContext(StateContext)
   const [showModal, setShowModal] = useState(null)
-  const navigate = useNavigate()
 
   const showModalClick = () => {
     setShowModal(true)

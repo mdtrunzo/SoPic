@@ -8,7 +8,7 @@ function LetterSize({close}) {
         return (
              <div className='replace-img'>
              <Pulse>
-            {!true ? <p style={{paddingTop: '10px', color:'#785AFF', fontSize:'14px'}}>Selecciona el texto <br />que deseas modificar</p> 
+            {true ? <p style={{paddingTop: '10px', color:'#785AFF', fontSize:'14px'}}>Selecciona el texto <br />que deseas modificar</p> 
             :
             (
               <div className='letter-size'>

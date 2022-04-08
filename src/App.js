@@ -4,7 +4,6 @@ import './App.css';
 import Header from './components/Header';
 import Zoom from './components/Zoom';
 import Page from './components/Page';
-import Panel from './components/Panel';
 import LoginModal from './components/LoginModal';
 
 function App() {
@@ -18,6 +17,7 @@ function App() {
     setModal(false)
   }
 
+
   return (
     <div className="App" >
        <Router>
@@ -28,7 +28,7 @@ function App() {
                <Zoom />
                 <div className="page-template">
                    <Page id={templateId}/>
-                   <Panel />
+                   {/* <Panel /> */}
                    {modal && <LoginModal closeModal={closeModal}/>}
                 </div>
              </>

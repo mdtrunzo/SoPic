@@ -23,46 +23,13 @@ function RotateBar({close, checkClick, rotateFunction, rotateFunction2, rotateFu
 
  //Rotate Action
  const rotateAction = (value) => {
-  if(value === '1') {
-    setRotateNumber('-90')
-  }
-  if(value === '2'){
-    setRotateNumber('0')
-  }
-  if(value === '3'){
-    setRotateNumber('90')
-  }
-  if(value === '4'){
-    setRotateNumber('180')
-  }
+  setRotateNumber(value)
 }
 const rotateAction2 = (value) => {
-  if(value === '1') {
-    setRotateNumber2('-90')
-  }
-  if(value === '2'){
-    setRotateNumber2('0')
-  }
-  if(value === '3'){
-    setRotateNumber2('90')
-  }
-  if(value === '4'){
-    setRotateNumber2('180')
-  }
+setRotateNumber2(value)
 }
 const rotateAction3 = (value) => {
-  if(value === '1') {
-    setRotateNumber3('-90')
-  }
-  if(value === '2'){
-    setRotateNumber3('0')
-  }
-  if(value === '3'){
-    setRotateNumber3('90')
-  }
-  if(value === '4'){
-    setRotateNumber3('180')
-  }
+ setRotateNumber3(value)
 }
 
         return (
@@ -76,7 +43,7 @@ const rotateAction3 = (value) => {
                    <p>{rotateNumber}°</p>
                    <p>DERECHA</p>
                  </div>
-                  <input type="range" className='range' min={1} max={4} defaultValue={2} onChange={(e) => {rotateFunction(e.target.value); rotateAction(e.target.value)}}></input>   
+                  <input type="range" className='range' min={0} max={180} onChange={(e) => {rotateFunction(e.target.value); rotateAction(e.target.value)}}></input>   
                 </div>       
               )
               : 
@@ -89,7 +56,7 @@ const rotateAction3 = (value) => {
                    <p>{rotateNumber2}°</p>
                    <p>DERECHA</p>
                  </div>
-                  <input type="range" className='range' min={1} max={4} defaultValue={2} onChange={(e) => {rotateFunction2(e.target.value); rotateAction2(e.target.value)}}></input>   
+                  <input type="range" className='range' min={0} max={180} onChange={(e) => {rotateFunction2(e.target.value); rotateAction2(e.target.value)}}></input>   
                 </div>      
               )
               :
@@ -102,7 +69,7 @@ const rotateAction3 = (value) => {
                    <p>{rotateNumber3}°</p>
                    <p>DERECHA</p>
                  </div>
-                  <input type="range" className='range' min={1} max={4} defaultValue={2} onChange={(e) => {rotateFunction3(e.target.value); rotateAction3(e.target.value)}}></input>   
+                  <input type="range" className='range' min={0} max={180} onChange={(e) => {rotateFunction3(e.target.value); rotateAction3(e.target.value)}}></input>   
                 </div>   
               )
             :

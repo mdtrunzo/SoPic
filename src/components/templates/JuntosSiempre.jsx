@@ -49,46 +49,13 @@ function JuntosSiempre() {
       }
       //Rotate IMG Actions
       const rotateFunction = (value) => {
-        if(value === '1') {
-          setRotate(-90)
-        }
-        if(value === '2'){
-          setRotate(0)
-        }
-        if(value === '3'){
-          setRotate(90)
-        }
-        if(value === '4'){
-          setRotate(180)
-        }
+        setRotate(value)
       }
       const rotateFunction2 = (value) => {
-        if(value === '1') {
-          setRotate2(-90)
-        }
-        if(value === '2'){
-          setRotate2(0)
-        }
-        if(value === '3'){
-          setRotate2(90)
-        }
-        if(value === '4'){
-          setRotate2(180)
-        }
+       setRotate2(value)
       }
       const rotateFunction3 = (value) => {
-        if(value === '1') {
-          setRotate3(-90)
-        }
-        if(value === '2'){
-          setRotate3(0)
-        }
-        if(value === '3'){
-          setRotate3(90)
-        }
-        if(value === '4'){
-          setRotate3(180)
-        }
+    setRotate3(value)
       }
 
       //Text actions
@@ -113,6 +80,7 @@ function JuntosSiempre() {
               return(
                   <Fade>
                   <div className="page-template-flex">
+                    <div className="" style={{overflow:'hidden'}}>
                   <div className="header-img" 
                   style={{backgroundImage: `url(${headerImg})`, transform: `rotate(${rotate}deg)`}} 
                   id='1'
@@ -129,7 +97,10 @@ function JuntosSiempre() {
                        />      
                        <label for="header-img">REEMPLAZAR IMAGEN</label>
                   </div>
-                  <div className="body-img">                     
+                  </div>
+
+                  <div className="body-img">    
+      
                       <div className="body-img1"  style={{backgroundImage: `url(${bodyImg})`, transform: `rotate(${rotate2}deg)`}} id='2' 
                       onClick={(e) => showRotateBarOnClick(e.target.id)}>
                         <input type="file" name="body-img1" id="body-img1"
@@ -138,7 +109,8 @@ function JuntosSiempre() {
                         }}
                         />
                         <label for="body-img1">REEMPLAZAR IMAGEN</label>
-                      </div>
+           
+                      </div>   
 
                       <div className="body-img1"  style={{backgroundImage: `url(${bodyImg2})`, transform: `rotate(${rotate3}deg)`}} id='3'
                        onClick={(e) => showRotateBarOnClick(e.target.id)}>
@@ -150,7 +122,7 @@ function JuntosSiempre() {
                         <label for="body-img2">REEMPLAZAR IMAGEN</label>
                       </div>
                   </div>
-            
+
                         <div className="texto-div-big-section">
                           <div className="texto-div" id='1' onClick={(e) => showTextPanelOnClick(e.target.id)}>
                            <div className="first-child" >

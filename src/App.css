@@ -39,22 +39,31 @@ body{
  width: 100%;
 }
 .body-img1, .body-img2{
-  width: 50%;
+  /* width: 50%;
+  height: 17em;
+  background-position: center;
+  background-size: cover; */
+}
+.body-img1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 17em;
   background-position: center;
   background-size: cover;
 }
-.body-img1{
-  margin: 10px 5px 0 0 ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.margin-img1 {
+  margin: 5px 5px 0 0;
+}
+.margin-img2{
+  margin: 5px 0 0 5px;
 }
 .body-img1 label{
   font-size: 8px !important;
 }
 .body-img2{
-  margin: 10px 0 0 5px;
+  /* margin: 10px 0 0 5px; */
 }
 .header-img input, .header-img label, .body-img1 input, .body-img1 label{
 display: none;

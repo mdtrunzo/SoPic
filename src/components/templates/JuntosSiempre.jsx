@@ -98,10 +98,10 @@ function JuntosSiempre() {
                        <label for="header-img">REEMPLAZAR IMAGEN</label>
                   </div>
                   </div>
-
+                
                   <div className="body-img">    
-      
-                      <div className="body-img1"  style={{backgroundImage: `url(${bodyImg})`, transform: `rotate(${rotate2}deg)`}} id='2' 
+                    <div style={{width: '100%', overflow:'hidden'}}>
+                      <div className="body-img1 margin-img1"  style={{backgroundImage: `url(${bodyImg})`, transform: `rotate(${rotate2}deg)`}} id='2' 
                       onClick={(e) => showRotateBarOnClick(e.target.id)}>
                         <input type="file" name="body-img1" id="body-img1"
                         onChange={(e) => {
@@ -111,8 +111,9 @@ function JuntosSiempre() {
                         <label for="body-img1">REEMPLAZAR IMAGEN</label>
            
                       </div>   
-
-                      <div className="body-img1"  style={{backgroundImage: `url(${bodyImg2})`, transform: `rotate(${rotate3}deg)`}} id='3'
+                      </div>
+                      <div style={{width: '100%', overflow:'hidden'}}>
+                      <div className="body-img1 margin-img2"  style={{backgroundImage: `url(${bodyImg2})`, transform: `rotate(${rotate3}deg)`}} id='3'
                        onClick={(e) => showRotateBarOnClick(e.target.id)}>
                       <input type="file" name="body-img2" id="body-img2"
                         onChange={(e) => {
@@ -121,8 +122,9 @@ function JuntosSiempre() {
                         />
                         <label for="body-img2">REEMPLAZAR IMAGEN</label>
                       </div>
+                      </div>
                   </div>
-
+          
                         <div className="texto-div-big-section">
                           <div className="texto-div" id='1' onClick={(e) => showTextPanelOnClick(e.target.id)}>
                            <div className="first-child" >

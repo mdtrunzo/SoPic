@@ -7,7 +7,6 @@ import img3 from '../assets/plantillas/juntos-siempre/3.png'
 import Spinner from '../Spinner'
 import Fade from 'react-reveal/Fade'
 import Panel from '../Panel';
-import { Controlled as ControlledZoom } from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
 function JuntosSiempre() {

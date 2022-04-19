@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { EditText } from 'react-edit-text';
 import 'react-edit-text/dist/index.css';
 import img1 from '../assets/plantillas/juntos-siempre/1.png'
@@ -7,6 +7,8 @@ import img3 from '../assets/plantillas/juntos-siempre/3.png'
 import Spinner from '../Spinner'
 import Fade from 'react-reveal/Fade'
 import Panel from '../Panel';
+import { Controlled as ControlledZoom } from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 function JuntosSiempre() {
       //States
@@ -98,7 +100,7 @@ function JuntosSiempre() {
                        <label for="header-img">REEMPLAZAR IMAGEN</label>
                   </div>
                   </div>
-                
+   
                   <div className="body-img">    
                     <div style={{width: '100%', overflow:'hidden'}}>
                       <div className="body-img1 margin-img1"  style={{backgroundImage: `url(${bodyImg})`, transform: `rotate(${rotate2}deg)`}} id='2' 
@@ -128,6 +130,7 @@ function JuntosSiempre() {
                      
                   </div>
                   <div className="texto-div-big-section">
+       
                           <div className="texto-div" id='1' onClick={(e) => showTextPanelOnClick(e.target.id)}>
                            <div className="first-child" >
                               <EditText defaultValue={item.span} 
@@ -138,15 +141,17 @@ function JuntosSiempre() {
                            </div>
                           </div> 
                              <p>|</p>
-                          <div >   
-                           <div className="second-child" id='2' onClick={(e) => showTextPanelOnClick(e.target.id)}>
+                         
+                           <div className="texto-div" id='2' onClick={(e) => showTextPanelOnClick(e.target.id)}>
+                             <div className="second-child">
                               <EditText defaultValue={item.text} 
                               id='2' 
                               style={{fontSize:`${textSize2}px`, color:`${textColor2}`}}
                               onClick={(e) => showTextPanelOnClick(e.target.id)}/> 
+                              </div>
                             </div>
-                           </div>
-                         </div>
+                            </div>
+
                   </Fade>
               )
           })

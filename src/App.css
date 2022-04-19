@@ -393,10 +393,9 @@ input[type=number] {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
 }
 .texto-div-big-section input{
-  width: 250px;
+  width: 140px;
   text-align: center;
 }
 .texto {

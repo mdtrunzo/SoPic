@@ -125,7 +125,9 @@ function JuntosSiempre() {
                       </div>
                   </div>
           
-                        <div className="texto-div-big-section">
+                     
+                  </div>
+                  <div className="texto-div-big-section">
                           <div className="texto-div" id='1' onClick={(e) => showTextPanelOnClick(e.target.id)}>
                            <div className="first-child" >
                               <EditText defaultValue={item.span} 
@@ -145,7 +147,6 @@ function JuntosSiempre() {
                             </div>
                            </div>
                          </div>
-                  </div>
                   </Fade>
               )
           })

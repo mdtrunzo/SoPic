@@ -93,8 +93,15 @@ function JuntosSiempre() {
                        type="file"
                        name="header-img"
                        id="header-img"
+                       accept='image/*'
                        onChange={(e) => {
-                         setHeaderImg(URL.createObjectURL(e.target.files[0]));
+                        const fileSize = e.target.files[0].size / 1024 / 1024
+                         if(fileSize > 2) {
+                           alert("File is too big!")
+                         }else{
+                          setHeaderImg(URL.createObjectURL(e.target.files[0]));
+                         }
+
                        }}
                        />      
                        <label for="header-img">REEMPLAZAR IMAGEN</label>
@@ -105,9 +112,14 @@ function JuntosSiempre() {
                     <div style={{width: '100%', overflow:'hidden'}}>
                       <div className="body-img1 margin-img1"  style={{backgroundImage: `url(${bodyImg})`, transform: `rotate(${rotate2}deg)`}} id='2' 
                       onClick={(e) => showRotateBarOnClick(e.target.id)}>
-                        <input type="file" name="body-img1" id="body-img1"
+                        <input type="file" name="body-img1" id="body-img1" accept='image/*'
                         onChange={(e) => {
-                          setBodyImg(URL.createObjectURL(e.target.files[0]));
+                          const fileSize = e.target.files[0].size / 1024 / 1024
+                          if(fileSize > 2) {
+                            alert("File is too big!")
+                          }else{
+                           setBodyImg(URL.createObjectURL(e.target.files[0]));
+                          }
                         }}
                         />
                         <label for="body-img1">REEMPLAZAR IMAGEN</label>
@@ -117,9 +129,14 @@ function JuntosSiempre() {
                       <div style={{width: '100%', overflow:'hidden'}}>
                       <div className="body-img1 margin-img2"  style={{backgroundImage: `url(${bodyImg2})`, transform: `rotate(${rotate3}deg)`}} id='3'
                        onClick={(e) => showRotateBarOnClick(e.target.id)}>
-                      <input type="file" name="body-img2" id="body-img2"
+                      <input type="file" name="body-img2" id="body-img2" accept='image/*'
                         onChange={(e) => {
+                          const fileSize = e.target.files[0].size / 1024 / 1024
+                         if(fileSize > 2) {
+                           alert("File is too big!")
+                         }else{
                           setBodyImg2(URL.createObjectURL(e.target.files[0]));
+                         }
                         }}
                         />
                         <label for="body-img2">REEMPLAZAR IMAGEN</label>

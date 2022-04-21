@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { EditText } from 'react-edit-text';
 import 'react-edit-text/dist/index.css';
-import img1 from '../assets/plantillas/juntos-siempre/1.png'
-import img2 from '../assets/plantillas/juntos-siempre/2.png'
-import img3 from '../assets/plantillas/juntos-siempre/3.png'
+// import img1 from '../assets/plantillas/juntos-siempre/1.png'
+// import img2 from '../assets/plantillas/juntos-siempre/2.png'
+// import img3 from '../assets/plantillas/juntos-siempre/3.png'
+import img from '../assets/Fondos_20x30cm.jpg'
 import Spinner from '../Spinner'
 import Fade from 'react-reveal/Fade'
 import Panel from '../Panel';
@@ -12,9 +13,9 @@ import 'react-medium-image-zoom/dist/styles.css'
 function JuntosSiempre() {
       //States
       const [juntosSiempre, setJuntosSiempre] = useState(null)
-      const [headerImg, setHeaderImg] = useState(img1);
-      const [bodyImg, setBodyImg] = useState(img2);
-      const [bodyImg2, setBodyImg2] = useState(img3);
+      const [headerImg, setHeaderImg] = useState(img);
+      const [bodyImg, setBodyImg] = useState(img);
+      const [bodyImg2, setBodyImg2] = useState(img);
       const [checkClick, setCheckClick] = useState('')
       const [checkTextClick, setCheckTextClick] = useState('')
       const [rotate, setRotate] = useState(0)
@@ -30,9 +31,9 @@ function JuntosSiempre() {
           "template": [
             {
               "id": 1,
-              "img1": `${img1}`,
-              "img2": `${img2}`,
-              "img3": `${img3}`,
+              "img1": `${img}`,
+              "img2": `${img}`,
+              "img3": `${img}`,
               "span": "Juntos Siempre",
               "text": "NUESTRO LUGAR EN EL MUNDO"
             }

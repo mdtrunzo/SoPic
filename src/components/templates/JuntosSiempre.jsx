@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import { EditText } from 'react-edit-text';
 import 'react-edit-text/dist/index.css';
-// import img1 from '../assets/plantillas/juntos-siempre/1.png'
-// import img2 from '../assets/plantillas/juntos-siempre/2.png'
-// import img3 from '../assets/plantillas/juntos-siempre/3.png'
 import img from '../assets/Fondos_20x30cm.jpg'
 import Spinner from '../Spinner'
 import Fade from 'react-reveal/Fade'
 import Panel from '../Panel';
 import 'react-medium-image-zoom/dist/styles.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function JuntosSiempre() {
       //States
@@ -73,6 +72,12 @@ function JuntosSiempre() {
       const changeTextColor2 = (value) => {
         setTextColor2(value)
        }
+       const showError = () => {
+        toast.error(`La imagen es muy pesada 🥺`,{ autoClose: 2000, position:'top-left' })
+      }
+      const showSuccess = () => {
+        toast.success(`Imagen cargada 😎`,{ autoClose: 2000, position:'top-left' })
+      }
     return (
         <div>
           {!juntosSiempre ? <Spinner /> 
@@ -97,9 +102,10 @@ function JuntosSiempre() {
                        onChange={(e) => {
                         const fileSize = e.target.files[0].size / 1024 / 1024
                          if(fileSize > 2) {
-                           alert("File is too big!")
+                           showError()
                          }else{
-                          setHeaderImg(URL.createObjectURL(e.target.files[0]));
+                          setHeaderImg(URL.createObjectURL(e.target.files[0]))
+                          showSuccess()
                          }
 
                        }}
@@ -116,9 +122,10 @@ function JuntosSiempre() {
                         onChange={(e) => {
                           const fileSize = e.target.files[0].size / 1024 / 1024
                           if(fileSize > 2) {
-                            alert("File is too big!")
+                            showError()
                           }else{
                            setBodyImg(URL.createObjectURL(e.target.files[0]));
+                           showSuccess()
                           }
                         }}
                         />
@@ -133,9 +140,10 @@ function JuntosSiempre() {
                         onChange={(e) => {
                           const fileSize = e.target.files[0].size / 1024 / 1024
                          if(fileSize > 2) {
-                           alert("File is too big!")
+                          showError()
                          }else{
                           setBodyImg2(URL.createObjectURL(e.target.files[0]));
+                          showSuccess()
                          }
                         }}
                         />
@@ -185,6 +193,7 @@ function JuntosSiempre() {
           changeTextColor={changeTextColor}
           changeTextColor2={changeTextColor2}
           />
+          <ToastContainer />
         </div>
     )
 }

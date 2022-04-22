@@ -1,0 +1,27 @@
+.collages-template .images{
+ display: flex;
+ flex-direction: row;
+}
+.collages-template .header-img label{
+    font-size: 8px !important;
+    padding: 8px 5px;
+}
+.collages-template .header-img{
+width: 115px;
+height: 115px;
+margin: 5px !important;
+}
+.collages-text-uno{
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
+.collages-text-uno .span > div{
+    padding: 10px 0 0 0;
+    margin: 0;
+    font-weight: bold;
+}
+.collages-text-uno .text > div{
+    padding: 0 ;
+    margin: 0 ;
+}

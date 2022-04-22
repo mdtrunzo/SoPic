@@ -8,7 +8,7 @@ import ColorSelect from './funciones/ColorSelect'
 import { useState, useEffect } from 'react'
 
 function Panel({checkClick, checkTextClick , rotateFunction, rotateFunction2, 
-  rotateFunction3, increaseDecreaseText, increaseDecreaseText2, changeTextColor, changeTextColor2}) {
+  rotateFunction3, rotateFunction4,rotateFunction5, increaseDecreaseText, increaseDecreaseText2, changeTextColor, changeTextColor2}) {
   const [displayNavbar, setDisplayNavbar] = useState('block')
   const [showReplaceImg, setShowReplaceImg] = useState('none')
   const [showRotateImg, setShowRotateImg] = useState('none')
@@ -90,6 +90,8 @@ function Panel({checkClick, checkTextClick , rotateFunction, rotateFunction2,
                     rotateFunction={rotateFunction}
                     rotateFunction2={rotateFunction2}
                     rotateFunction3={rotateFunction3}
+                    rotateFunction4={rotateFunction4}
+                    rotateFunction5={rotateFunction5}
                     />
                  </div>
                  <div style={{display:showIncreaseImg}}>

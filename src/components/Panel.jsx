@@ -8,7 +8,11 @@ import ColorSelect from './funciones/ColorSelect'
 import { useState, useEffect } from 'react'
 
 function Panel({checkClick, checkTextClick , rotateFunction, rotateFunction2, 
-  rotateFunction3, rotateFunction4,rotateFunction5, increaseDecreaseText, increaseDecreaseText2, changeTextColor, changeTextColor2}) {
+  rotateFunction3, rotateFunction4,rotateFunction5, rotateFunction6,
+  rotateFunction7, rotateFunction8, rotateFunction9, rotateFunction10,
+  rotateFunction11, rotateFunction12, increaseDecreaseText, 
+increaseDecreaseText2,increaseDecreaseText3,increaseDecreaseText4,
+ changeTextColor, changeTextColor2}) {
   const [displayNavbar, setDisplayNavbar] = useState('block')
   const [showReplaceImg, setShowReplaceImg] = useState('none')
   const [showRotateImg, setShowRotateImg] = useState('none')
@@ -92,6 +96,13 @@ function Panel({checkClick, checkTextClick , rotateFunction, rotateFunction2,
                     rotateFunction3={rotateFunction3}
                     rotateFunction4={rotateFunction4}
                     rotateFunction5={rotateFunction5}
+                    rotateFunction6={rotateFunction6}
+                    rotateFunction7={rotateFunction7}
+                    rotateFunction8={rotateFunction8}
+                    rotateFunction9={rotateFunction9}
+                    rotateFunction10={rotateFunction10}
+                    rotateFunction11={rotateFunction11}
+                    rotateFunction12={rotateFunction12}
                     />
                  </div>
                  <div style={{display:showIncreaseImg}}>
@@ -99,6 +110,8 @@ function Panel({checkClick, checkTextClick , rotateFunction, rotateFunction2,
                     checkTextClick={checkTextClick}
                     increaseDecreaseText={increaseDecreaseText}
                     increaseDecreaseText2={increaseDecreaseText2}
+                    increaseDecreaseText3={increaseDecreaseText3}
+                    increaseDecreaseText4={increaseDecreaseText4}
                     changeTextColor={changeTextColor}
                     changeTextColor2={changeTextColor2}
                     />

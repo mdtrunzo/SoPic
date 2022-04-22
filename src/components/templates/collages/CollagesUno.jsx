@@ -24,11 +24,23 @@ function CollagesUno() {
     const [getImg11, setImg11] = useState(img);
     const [getImg12, setImg12] = useState(img);
     const [checkClick, setCheckClick] = useState('')
+    const [checkTextClick, setCheckTextClick] = useState('')
     const [rotate, setRotate] = useState(0)
     const [rotate2, setRotate2] = useState(0)
     const [rotate3, setRotate3] = useState(0)
     const [rotate4, setRotate4] = useState(0)
     const [rotate5, setRotate5] = useState(0)
+    const [rotate6, setRotate6] = useState(0)
+    const [rotate7, setRotate7] = useState(0)
+    const [rotate8, setRotate8] = useState(0)
+    const [rotate9, setRotate9] = useState(0)
+    const [rotate10, setRotate10] = useState(0)
+    const [rotate11, setRotate11] = useState(0)
+    const [rotate12, setRotate12] = useState(0)
+    const [textSize, setTextSize] = useState('22')
+    const [textColor, setTextColor] = useState('#000000')
+    const [textSize2, setTextSize2] = useState('16')
+    const [textColor2, setTextColor2] = useState('#000000')
 
     useEffect(() => {
         setCollageUno({
@@ -59,6 +71,9 @@ function CollagesUno() {
       const showRotateBarOnClick = (id) => {
         setCheckClick(id)
       }
+      const showTextPanelOnClick = (id) => {
+        setCheckTextClick(id)
+      }
       const rotateFunction = (value) => {
         setRotate(value)
       }
@@ -74,6 +89,39 @@ function CollagesUno() {
       const rotateFunction5 = (value) => {
         setRotate5(value)
       }
+      const rotateFunction6 = (value) => {
+        setRotate6(value)
+      }
+      const rotateFunction7 = (value) => {
+        setRotate7(value)
+      }
+      const rotateFunction8 = (value) => {
+        setRotate8(value)
+      }
+      const rotateFunction9 = (value) => {
+        setRotate9(value)
+      }
+      const rotateFunction10 = (value) => {
+        setRotate10(value)
+      }
+      const rotateFunction11 = (value) => {
+        setRotate11(value)
+      }
+      const rotateFunction12 = (value) => {
+        setRotate12(value)
+      }
+      const increaseDecreaseText3 = (value) => {
+        setTextSize(value)
+      }
+      const increaseDecreaseText4 = (value) => {
+        setTextSize2(value)
+      }
+      const changeTextColor = (value) => {
+       setTextColor(value)
+      }
+      const changeTextColor2 = (value) => {
+        setTextColor2(value)
+       }
     const showError = () => {
       toast.error(`La imagen es muy pesada 🥺`,{ autoClose: 2000, position:'top-left' })
     }
@@ -168,7 +216,6 @@ function CollagesUno() {
                            {/* Imagen 4 */}
                            <div style={{overflow:'hidden'}}>
                             <div className="header-img" 
-                            // style={{backgroundImage: `url(${getImg1})`, transform: `rotate(${rotate}deg)`}} 
                             style={{backgroundImage: `url(${getImg4})`, transform: `rotate(${rotate4}deg)`}} 
                             id='4'
                             type='img'
@@ -218,11 +265,10 @@ function CollagesUno() {
                                 {/* Imagen 6 */}
                            <div style={{overflow:'hidden'}}>
                             <div className="header-img" 
-                            // style={{backgroundImage: `url(${getImg1})`, transform: `rotate(${rotate}deg)`}} 
-                            style={{backgroundImage: `url(${getImg6})`}} 
-                            id='2'
+                            style={{backgroundImage: `url(${getImg6})`, transform:`rotate(${rotate6}deg)`}} 
+                            id='6'
                             type='img'
-                            // onClick={(e) => showRotateBarOnClick(e.target.id)}
+                            onClick={(e) => showRotateBarOnClick(e.target.id)}
                             >
                             <input type="file" name="img6" accept='image/*' id='img6'
                               onChange={(e) => {
@@ -245,11 +291,10 @@ function CollagesUno() {
                            {/* Imagen 7 */}
                            <div style={{overflow:'hidden'}}>
                             <div className="header-img" 
-                            // style={{backgroundImage: `url(${getImg1})`, transform: `rotate(${rotate}deg)`}} 
-                            style={{backgroundImage: `url(${getImg7})`}} 
-                            id='2'
+                            style={{backgroundImage: `url(${getImg7})`, transform:`rotate(${rotate7}deg)`}} 
+                            id='7'
                             type='img'
-                            // onClick={(e) => showRotateBarOnClick(e.target.id)}
+                            onClick={(e) => showRotateBarOnClick(e.target.id)}
                             >
                             <input type="file" name="img7" accept='image/*' id='img7'
                               onChange={(e) => {
@@ -271,11 +316,10 @@ function CollagesUno() {
                                 {/* Imagen 8 */}
                            <div style={{overflow:'hidden'}}>
                             <div className="header-img" 
-                            // style={{backgroundImage: `url(${getImg1})`, transform: `rotate(${rotate}deg)`}} 
-                            style={{backgroundImage: `url(${getImg8})`}} 
-                            id='2'
+                            style={{backgroundImage: `url(${getImg8})`, transform:`rotate(${rotate8}deg)`}} 
+                            id='8'
                             type='img'
-                            // onClick={(e) => showRotateBarOnClick(e.target.id)}
+                            onClick={(e) => showRotateBarOnClick(e.target.id)}
                             >
                             <input type="file" name="img8" accept='image/*' id='img8'
                               onChange={(e) => {
@@ -296,11 +340,10 @@ function CollagesUno() {
                                 {/* Imagen 9 */}
                            <div style={{overflow:'hidden'}}>
                             <div className="header-img" 
-                            // style={{backgroundImage: `url(${getImg1})`, transform: `rotate(${rotate}deg)`}} 
-                            style={{backgroundImage: `url(${getImg9})`}} 
-                            id='2'
+                            style={{backgroundImage: `url(${getImg9})`, transform:`rotate(${rotate9}deg)`}} 
+                            id='9'
                             type='img'
-                            // onClick={(e) => showRotateBarOnClick(e.target.id)}
+                            onClick={(e) => showRotateBarOnClick(e.target.id)}
                             >
                             <input type="file" name="img9" accept='image/*' id='img9'
                               onChange={(e) => {
@@ -317,17 +360,16 @@ function CollagesUno() {
                              <label for="img9">REEMPLAZAR IMAGEN</label>
                               </div>
                                </div>
-                               {/* Fin Imagen 6 */}
+                               {/* Fin Imagen 9 */}
                             </div>
                             <div className="images">
                            {/* Imagen 10 */}
                            <div style={{overflow:'hidden'}}>
                             <div className="header-img" 
-                            // style={{backgroundImage: `url(${getImg1})`, transform: `rotate(${rotate}deg)`}} 
-                            style={{backgroundImage: `url(${getImg10})`}} 
-                            id='2'
+                            style={{backgroundImage: `url(${getImg10})`, transform: `rotate(${rotate10}deg)`}} 
+                            id='10'
                             type='img'
-                            // onClick={(e) => showRotateBarOnClick(e.target.id)}
+                            onClick={(e) => showRotateBarOnClick(e.target.id)}
                             >
                             <input type="file" name="img10" accept='image/*' id='img10'
                               onChange={(e) => {
@@ -349,11 +391,10 @@ function CollagesUno() {
                                 {/* Imagen 11 */}
                            <div style={{overflow:'hidden'}}>
                             <div className="header-img" 
-                            // style={{backgroundImage: `url(${getImg1})`, transform: `rotate(${rotate}deg)`}} 
-                            style={{backgroundImage: `url(${getImg11})`}} 
-                            id='2'
+                            style={{backgroundImage: `url(${getImg11})`, transform: `rotate(${rotate11}deg)`}} 
+                            id='11'
                             type='img'
-                            // onClick={(e) => showRotateBarOnClick(e.target.id)}
+                            onClick={(e) => showRotateBarOnClick(e.target.id)}
                             >
                             <input type="file" name="img11" accept='image/*' id='img11'
                               onChange={(e) => {
@@ -374,11 +415,10 @@ function CollagesUno() {
                                 {/* Imagen 12 */}
                            <div style={{overflow:'hidden'}}>
                             <div className="header-img" 
-                            // style={{backgroundImage: `url(${getImg1})`, transform: `rotate(${rotate}deg)`}} 
-                            style={{backgroundImage: `url(${getImg12})`}} 
-                            id='2'
+                            style={{backgroundImage: `url(${getImg12})`, transform: `rotate(${rotate12}deg)`}} 
+                            id='12'
                             type='img'
-                            // onClick={(e) => showRotateBarOnClick(e.target.id)}
+                            onClick={(e) => showRotateBarOnClick(e.target.id)}
                             >
                             <input type="file" name="img12" accept='image/*' id='img12'
                               onChange={(e) => {
@@ -402,11 +442,22 @@ function CollagesUno() {
 
 
                        <div className="collages-text-uno">
-                           <div className="span">
-                               <EditText defaultValue={item.span} />
+                           <div className="span" id='3' onClick={(e) => showTextPanelOnClick(e.target.id)}>
+      
+                               <EditText 
+                               defaultValue={item.span} 
+                               id='3' 
+                               style={{fontSize:`${textSize}px`, color:`${textColor}`}}
+                               onClick={(e) => showTextPanelOnClick(e.target.id)}
+                               />
+                        
                            </div>
-                           <div className="text">
-                               <EditText defaultValue={item.text} />
+                           <div className="text" id='4' onClick={(e) => showTextPanelOnClick(e.target.id)}>
+                               <EditText defaultValue={item.text} 
+                               id='4'
+                               style={{fontSize:`${textSize2}px`, color:`${textColor2}`}}
+                               onClick={(e) => showTextPanelOnClick(e.target.id)}
+                               />
                            </div>
                        </div>
                     </Fade>
@@ -416,11 +467,23 @@ function CollagesUno() {
         }
         <Panel 
          checkClick={checkClick} 
+         checkTextClick={checkTextClick}
          rotateFunction={rotateFunction}
          rotateFunction2={rotateFunction2}
          rotateFunction3={rotateFunction3}
          rotateFunction4={rotateFunction4}
          rotateFunction5={rotateFunction5}
+         rotateFunction6={rotateFunction6}
+         rotateFunction7={rotateFunction7}
+         rotateFunction8={rotateFunction8}
+         rotateFunction9={rotateFunction9}
+         rotateFunction10={rotateFunction10}
+         rotateFunction11={rotateFunction11}
+         rotateFunction12={rotateFunction12}
+         increaseDecreaseText3={increaseDecreaseText3}
+         increaseDecreaseText4={increaseDecreaseText4}
+         changeTextColor={changeTextColor}
+         changeTextColor2={changeTextColor2}
         />
         <ToastContainer />
     </div>

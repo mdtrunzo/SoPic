@@ -3,8 +3,8 @@
  flex-direction: row;
 }
 .collages-template .header-img label{
-    font-size: 8px !important;
-    padding: 8px 5px;
+font-size: 8px !important;
+padding: 8px 5px;
 }
 .collages-template .header-img{
 width: 115px;
@@ -17,11 +17,11 @@ flex-direction: column;
 align-items: flex-end;
 }
 .collages-text-uno .span > div{
-    padding: 10px 0 0 0;
-    margin: 0;
-    font-weight: bold;
+padding: 10px 0 0 0;
+margin: 0;
+font-weight: bold;
 }
 .collages-text-uno .text > div{
-    padding: 0 ;
-    margin: 0 ;
+padding: 0 ;
+margin: 0 ;
 }

@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'ApexNewLight';
+    src: local('ApexNewLight'), url(../../../fonts/ApexNewLight.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'ApexNewBold';
+    src: local('ApexNewBold'), url(../../../fonts/ApexNewBold.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'BellMTRegular';
+    src: local('BELL'), url(../../../fonts/BELL.TTF) format('truetype');
+  }
 .collages-template .images{
  display: flex;
  flex-direction: row;
@@ -20,8 +32,10 @@ align-items: flex-end;
 padding: 10px 0 0 0;
 margin: 0;
 font-weight: bold;
+font-family: 'ApexNewBold';
 }
 .collages-text-uno .text > div{
 padding: 0 ;
 margin: 0 ;
+font-family: 'BellMTRegular';
 }

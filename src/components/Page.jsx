@@ -24,13 +24,12 @@ function Page() {
   const { templateId } = useContext(StateContext)
   return (
     <>
-      <div className="super-container">
-        <TransformWrapper wheel={{ disabled: false, step: 0.1 }}>
-          {({ zoomIn, zoomOut, ...rest }) => (
-            <div className="tools">
-              <Zoom zoomIn={zoomIn} zoomOut={zoomOut} />
-            
+      <TransformWrapper wheel={{ disabled: false, step: 0.1 }}>
+        {({ zoomIn, zoomOut, ...rest }) => (
+          <div className="tools">
+            <Zoom zoomIn={zoomIn} zoomOut={zoomOut} />
 
+            <div className="super-container">
               <TransformComponent>
                 <Fragment>
                   <Template>
@@ -67,9 +66,9 @@ function Page() {
                 </Fragment>
               </TransformComponent>
             </div>
-          )}
-        </TransformWrapper>
-      </div>
+          </div>
+        )}
+      </TransformWrapper>
     </>
   )
 }

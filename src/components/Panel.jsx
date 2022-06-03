@@ -1,23 +1,24 @@
-import CollectionsIcon from '@mui/icons-material/Collections';
-import AutorenewIcon from '@mui/icons-material/Autorenew';
-import TextIncreaseIcon from '@mui/icons-material/TextIncrease';
-import BrushIcon from '@mui/icons-material/Brush';
-import RotateBar from './funciones/RotateBar';
+import CollectionsIcon from '@mui/icons-material/Collections'
+import AutorenewIcon from '@mui/icons-material/Autorenew'
+import TextIncreaseIcon from '@mui/icons-material/TextIncrease'
+import BrushIcon from '@mui/icons-material/Brush'
+import RotateBar from './funciones/RotateBar'
 import ReplaceImg from './funciones/ReplaceImg'
 import ColorSelect from './funciones/ColorSelect'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import StateContext from '../context/StateProvider'
 
-function Panel({checkClick, checkTextClick , rotateFunction, rotateFunction2, 
-  rotateFunction3, rotateFunction4,rotateFunction5, rotateFunction6,
-  rotateFunction7, rotateFunction8, rotateFunction9, rotateFunction10,
-  rotateFunction11, rotateFunction12, increaseDecreaseText, 
-increaseDecreaseText2,increaseDecreaseText3,increaseDecreaseText4,
- changeTextColor, changeTextColor2}) {
+function Panel() {
   const [displayNavbar, setDisplayNavbar] = useState('block')
   const [showReplaceImg, setShowReplaceImg] = useState('none')
   const [showRotateImg, setShowRotateImg] = useState('none')
   const [showIncreaseImg, setShowIncreaseImg] = useState('none')
-  
+  const {
+    checkClick,
+    checkTextClick,
+    increaseDecreaseText,
+    increaseDecreaseText2,
+  } = useContext(StateContext)
 
   const showReplacePanel = () => {
     setShowReplaceImg('block')
@@ -45,82 +46,104 @@ increaseDecreaseText2,increaseDecreaseText3,increaseDecreaseText4,
     setShowIncreaseImg('none')
     setDisplayNavbar('block')
   }
-  
+
   useEffect(() => {
-    if(checkClick) {
+    if (checkClick) {
       showRotatePanel()
     }
-  },[checkClick])
+  }, [checkClick])
 
   useEffect(() => {
-    if(checkTextClick){
+    if (checkTextClick) {
       showColorPanel()
     }
-  },[checkTextClick])
+  }, [checkTextClick])
 
-        return (       
-            <div className="footer">
-                <nav className="navbar-footer" >
-                <ul style={{display: displayNavbar}}>
-                  <div className="navbar-footer-top">
-                    <div className='iconos-menu' onClick={showReplacePanel}>
-                     <CollectionsIcon />
-                      <li>REEMPLAZAR IMAGEN</li>
-                    </div>
-                    <div className='iconos-menu' onClick={showRotatePanel}>
-                     <AutorenewIcon />
-                      <li>ROTAR IMAGEN</li>
-                    </div>
-                    </div>
-                    <div className="navbar-footer-bottom" >
-                    <div className="iconos-menu" onClick={showIncreasePanel}>
-                      <TextIncreaseIcon />
-                      <li>TAMAÑO DE LETRA</li>
-                    </div>
-                    <div className="iconos-menu" onClick={showIncreasePanel}>
-                      <BrushIcon />
-                      <li>COLOR DE LETRA</li>
-                    </div>
-                    </div>
-                </ul>
-                <div className="functions-bar" >
-                 <div style={{display: showReplaceImg}}>
-                    <ReplaceImg close={closePanel}/>
-                 </div>
-                 <div style={{display:showRotateImg}}>
-                    <RotateBar 
-                    close={closePanel} 
-                    checkClick={checkClick} 
-                    rotateFunction={rotateFunction}
-                    rotateFunction2={rotateFunction2}
-                    rotateFunction3={rotateFunction3}
-                    rotateFunction4={rotateFunction4}
-                    rotateFunction5={rotateFunction5}
-                    rotateFunction6={rotateFunction6}
-                    rotateFunction7={rotateFunction7}
-                    rotateFunction8={rotateFunction8}
-                    rotateFunction9={rotateFunction9}
-                    rotateFunction10={rotateFunction10}
-                    rotateFunction11={rotateFunction11}
-                    rotateFunction12={rotateFunction12}
-                    />
-                 </div>
-                 <div style={{display:showIncreaseImg}}>
-                    <ColorSelect close={closePanel}
-                    checkTextClick={checkTextClick}
-                    increaseDecreaseText={increaseDecreaseText}
-                    increaseDecreaseText2={increaseDecreaseText2}
-                    increaseDecreaseText3={increaseDecreaseText3}
-                    increaseDecreaseText4={increaseDecreaseText4}
-                    changeTextColor={changeTextColor}
-                    changeTextColor2={changeTextColor2}
-                    />
-                 </div>
-                </div>
-                </nav>
+  return (
+    <div className="footer">
+      <nav className="navbar-footer navbar-footer-desktop">
+        <ul style={{ display: displayNavbar }}>
+          <div className="navbar-footer-top">
+            <div className="iconos-menu" onClick={showReplacePanel}>
+              <CollectionsIcon />
+              <li>REEMPLAZAR IMAGEN</li>
             </div>
+            <div className="iconos-menu" onClick={showRotatePanel}>
+              <AutorenewIcon />
+              <li>ROTAR IMAGEN</li>
+            </div>
+          </div>
+          <div className="navbar-footer-bottom">
+            <div className="iconos-menu" onClick={showIncreasePanel}>
+              <TextIncreaseIcon />
+              <li>TAMAÑO DE LETRA</li>
+            </div>
+            <div className="iconos-menu" onClick={showIncreasePanel}>
+              <BrushIcon />
+              <li>COLOR DE LETRA</li>
+            </div>
+          </div>
+        </ul>
+        <div className="functions-bar">
+          <div style={{ display: showReplaceImg }}>
+            <ReplaceImg close={closePanel} />
+          </div>
+          <div style={{ display: showRotateImg }}>
+            <RotateBar
+              close={closePanel}
+            />
+          </div>
+          <div style={{ display: showIncreaseImg }}>
+            <ColorSelect
+              close={closePanel}
+              increaseDecreaseText={increaseDecreaseText}
+              increaseDecreaseText2={increaseDecreaseText2}
+            />
+          </div>
+        </div>
+      </nav>
 
-        )
-    }
+      <nav className="navbar-footer navbar-footer-mobile">
+        <ul style={{ display: displayNavbar }}>
+          <div className="navbar-footer-top">
+            <div className="iconos-menu" onClick={showReplacePanel}>
+              <CollectionsIcon />
+              <li>REEMPLAZAR<br /> IMAGEN</li>
+            </div>
+            <div className="iconos-menu" onClick={showRotatePanel}>
+              <AutorenewIcon />
+              <li>ROTAR<br /> IMAGEN</li>
+            </div>
+            <div className="iconos-menu" onClick={showIncreasePanel}>
+              <TextIncreaseIcon />
+              <li>TAMAÑO <br /> LETRA</li>
+            </div>
+            <div className="iconos-menu" onClick={showIncreasePanel}>
+              <BrushIcon />
+              <li>COLOR <br /> LETRA</li>
+            </div>
+          </div>
+        </ul>
+        <div className="functions-bar">
+          <div style={{ display: showReplaceImg }}>
+            <ReplaceImg close={closePanel} />
+          </div>
+          <div style={{ display: showRotateImg }}>
+            <RotateBar
+              close={closePanel}
+            />
+          </div>
+          <div style={{ display: showIncreaseImg }}>
+            <ColorSelect
+              close={closePanel}
+              increaseDecreaseText={increaseDecreaseText}
+              increaseDecreaseText2={increaseDecreaseText2}
+            />
+          </div>
+        </div>
+      </nav>
+    </div>
+  )
+}
 
-export default Panel;
+export default Panel

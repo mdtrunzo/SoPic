@@ -1,4 +1,12 @@
 @font-face {
+    font-family: 'AlegreyaBold';
+    src: local('Alegreya-Bold'), url(../../../fonts/Alegreya-Bold.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'AlegreyaRegular';
+    src: local('Alegreya-Regular'), url(../../../fonts/Alegreya-Regular.ttf) format('truetype');
+  }
+@font-face {
     font-family: 'ApexNewLight';
     src: local('ApexNewLight'), url(../../../fonts/ApexNewLight.otf) format('opentype');
   }
@@ -7,8 +15,44 @@
     src: local('ApexNewBold'), url(../../../fonts/ApexNewBold.otf) format('opentype');
   }
   @font-face {
+    font-family: 'Bacalisties';
+    src: local('Bacalisties'), url(../../../fonts/Bacalisties.ttf) format('trutype');
+  }
+  @font-face {
+    font-family: 'BarlowBold';
+    src: local('Barlow-Bold'), url(../../../fonts/Barlow-Bold.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'BarlowLight';
+    src: local('Barlow-Ligh'), url(../../../fonts/Barlow-Light.otf) format('trutype');
+  }
+  @font-face {
     font-family: 'BellMTRegular';
     src: local('BELL'), url(../../../fonts/BELL.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'BellMTBold';
+    src: local('BELLB'), url(../../../fonts/BELLB.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'Bodoni';
+    src: local('Bodoni72OS'), url(../../../fonts/Bodoni72OS.ttc) format('truetype');
+  }
+  @font-face {
+    font-family: 'BolliviaRosillaDemo';
+    src: local('BolliviaRosillaDemo'), url(../../../fonts/BolliviaRosillaDemo.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Gothic';
+    src: local('GOTHIC'), url(../../../fonts/GOTHIC.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'GothicBold';
+    src: local('GOTHICB'), url(../../../fonts/GOTHICB.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'OpenSans-Light';
+    src: local('OpenSans-Light'), url(../../../fonts/OpenSans-Light.ttf) format('truetype');
   }
 .collages-template .images{
  display: flex;
@@ -28,14 +72,81 @@ display: flex;
 flex-direction: column;
 align-items: flex-end;
 }
-.collages-text-uno .span > div{
+.collages-text-cuatro{
+  display: flex;
+flex-direction: column;
+align-items: center;
+}
+.collages-text-uno .span > div, .collages-text-cuatro .span > div{
 padding: 10px 0 0 0;
 margin: 0;
 font-weight: bold;
 font-family: 'ApexNewBold';
 }
-.collages-text-uno .text > div{
+.collages-text-uno .text > div, .collages-text-cuatro .text > div{
 padding: 0 ;
 margin: 0 ;
 font-family: 'BellMTRegular';
 }
+.imagen-central-collage-cinco .header-img{
+  width: 365px;
+  height: 200px;
+}
+.header-section-collage-template2{
+    display: flex;
+}
+
+.header-section-collage-template2 .header-section-one .header-img{
+    width: 175px;
+    height: 250px;
+}
+.header-section-collage-template2 .header-section-two .header-img{
+height: 120px;
+width: 175px;
+}
+.collages-template-tres .header-section-collage-template2 .header-section-one .header-img{
+    width: 150px;
+    height: 250px;
+}
+.collages-template-tres .header-section-collage-template2 .header-section-two .header-img{
+    height: 250px;
+    width: 200px;
+    }
+.footer-section-collage-template2 .header-img{
+    width: 360px;
+    height: 250px;
+}
+.footer-section-collage-template3 .header-img {
+    width: 360px;
+    height: 250px;
+}
+.template-tres-cuarta-foto .header-img{
+    height: 180px !important;
+}
+.collages-text-dos .span > div{
+    padding: 10px 0 0 0;
+    margin: 0;
+    font-family: 'BellMTRegular';
+    word-break: break-all;
+    }
+    .collages-template-tres .span > div{
+      font-family: 'BellMTRegular'; 
+    }
+   
+    .collages-text-dos .text > div{
+    padding: 0 ;
+    margin: 0 ;
+    font-family: 'ApexNewBold';
+    }
+    .collages-template hr{
+        width: 360px;
+        border:1px solid black;
+    }
+  .flex-text-section {
+      display: flex;
+      flex-direction: column;
+  }
+  .flex-text-section .collages-text-dos .text > div{
+      width: 150px;
+      font-family: 'BarlowLight';
+  }

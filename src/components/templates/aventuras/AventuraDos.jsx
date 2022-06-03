@@ -7,8 +7,8 @@ import img from '../../assets/Fondos_20x30cm.jpg'
 import Spinner from '../../Spinner'
 import StateContext from '../../../context/StateProvider'
 
-function CollagesUno() {
-  const [collageUno, setCollageUno] = useState(null)
+function AventuraDos() {
+  const [aventuraDos, setAventuraDos] = useState(null)
   const {
     getImg1,
     getImg2,
@@ -58,7 +58,7 @@ function CollagesUno() {
   } = useContext(StateContext)
 
   useEffect(() => {
-    setCollageUno({
+    setAventuraDos({
       template: [
         {
           id: 2,
@@ -74,8 +74,8 @@ function CollagesUno() {
           img10: `${img}`,
           img11: `${img}`,
           img12: `${img}`,
-          span: 'TENEMOS AL MEJOR',
-          text: 'Gracias Pa!',
+          span: 'NUESTRO LUGAR EN EL MUNDO',
+          text: 'Juntos Siempre',
         },
       ],
     })
@@ -83,10 +83,10 @@ function CollagesUno() {
 
   return (
     <div>
-      {!collageUno ? (
+      {!aventuraDos ? (
         <Spinner />
       ) : (
-        collageUno?.template.map((item) => {
+        aventuraDos?.template.map((item) => {
           return (
             <Fade>
               <div className="page-template-flex collages-template">
@@ -109,7 +109,7 @@ function CollagesUno() {
                         accept="image/*"
                         id="img1"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
+                            const fileSize = e.target.files[0].size / 1024 / 1024
                             if (fileSize < 2) {
                               showErrorLess()
                               return
@@ -121,7 +121,7 @@ function CollagesUno() {
                               setImg1(URL.createObjectURL(e.target.files[0]))
                               showSuccess()
                             }
-                        }}
+                          }}
                       />
                       <label for="img1">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -145,19 +145,19 @@ function CollagesUno() {
                         accept="image/*"
                         id="img2"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
-                          if (fileSize < 2) {
-                            showErrorLess()
-                            return
-                          } 
-                          if (fileSize > 10) {
-                            showError()
-                            return
-                          } else {
-                            setImg2(URL.createObjectURL(e.target.files[0]))
-                            showSuccess()
-                          }
-                        }}
+                            const fileSize = e.target.files[0].size / 1024 / 1024
+                            if (fileSize < 2) {
+                              showErrorLess()
+                              return
+                            } 
+                            if (fileSize > 10) {
+                              showError()
+                              return
+                            } else {
+                              setImg2(URL.createObjectURL(e.target.files[0]))
+                              showSuccess()
+                            }
+                          }}
                       />
                       <label for="img2">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -181,7 +181,7 @@ function CollagesUno() {
                         accept="image/*"
                         id="img3"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
+                            const fileSize = e.target.files[0].size / 1024 / 1024
                             if (fileSize < 2) {
                               showErrorLess()
                               return
@@ -193,7 +193,7 @@ function CollagesUno() {
                               setImg3(URL.createObjectURL(e.target.files[0]))
                               showSuccess()
                             }
-                        }}
+                          }}
                       />
                       <label for="img3">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -219,19 +219,19 @@ function CollagesUno() {
                         accept="image/*"
                         id="img4"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
-                          if (fileSize < 2) {
-                            showErrorLess()
-                            return
-                          } 
-                          if (fileSize > 10) {
-                            showError()
-                            return
-                          } else {
-                            setImg4(URL.createObjectURL(e.target.files[0]))
-                            showSuccess()
-                          }
-                        }}
+                            const fileSize = e.target.files[0].size / 1024 / 1024
+                            if (fileSize < 2) {
+                              showErrorLess()
+                              return
+                            } 
+                            if (fileSize > 10) {
+                              showError()
+                              return
+                            } else {
+                              setImg4(URL.createObjectURL(e.target.files[0]))
+                              showSuccess()
+                            }
+                          }}
                       />
                       <label for="img4">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -256,19 +256,19 @@ function CollagesUno() {
                         accept="image/*"
                         id="img5"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
-                          if (fileSize < 2) {
-                            showErrorLess()
-                            return
-                          } 
-                          if (fileSize > 10) {
-                            showError()
-                            return
-                          } else {
-                            setImg5(URL.createObjectURL(e.target.files[0]))
-                            showSuccess()
-                          }
-                        }}
+                            const fileSize = e.target.files[0].size / 1024 / 1024
+                            if (fileSize < 2) {
+                              showErrorLess()
+                              return
+                            } 
+                            if (fileSize > 10) {
+                              showError()
+                              return
+                            } else {
+                              setImg5(URL.createObjectURL(e.target.files[0]))
+                              showSuccess()
+                            }
+                          }}
                       />
                       <label for="img5">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -292,19 +292,19 @@ function CollagesUno() {
                         accept="image/*"
                         id="img6"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
-                          if (fileSize < 2) {
-                            showErrorLess()
-                            return
-                          } 
-                          if (fileSize > 10) {
-                            showError()
-                            return
-                          } else {
-                            setImg6(URL.createObjectURL(e.target.files[0]))
-                            showSuccess()
-                          }
-                        }}
+                            const fileSize = e.target.files[0].size / 1024 / 1024
+                            if (fileSize < 2) {
+                              showErrorLess()
+                              return
+                            } 
+                            if (fileSize > 10) {
+                              showError()
+                              return
+                            } else {
+                              setImg6(URL.createObjectURL(e.target.files[0]))
+                              showSuccess()
+                            }
+                          }}
                       />
                       <label for="img6">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -330,19 +330,19 @@ function CollagesUno() {
                         accept="image/*"
                         id="img7"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
-                          if (fileSize < 2) {
-                            showErrorLess()
-                            return
-                          } 
-                          if (fileSize > 10) {
-                            showError()
-                            return
-                          } else {
-                            setImg7(URL.createObjectURL(e.target.files[0]))
-                            showSuccess()
-                          }
-                        }}
+                            const fileSize = e.target.files[0].size / 1024 / 1024
+                            if (fileSize < 2) {
+                              showErrorLess()
+                              return
+                            } 
+                            if (fileSize > 10) {
+                              showError()
+                              return
+                            } else {
+                              setImg7(URL.createObjectURL(e.target.files[0]))
+                              showSuccess()
+                            }
+                          }}
                       />
                       <label for="img7">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -367,19 +367,19 @@ function CollagesUno() {
                         accept="image/*"
                         id="img8"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
-                          if (fileSize < 2) {
-                            showErrorLess()
-                            return
-                          } 
-                          if (fileSize > 10) {
-                            showError()
-                            return
-                          } else {
-                            setImg8(URL.createObjectURL(e.target.files[0]))
-                            showSuccess()
-                          }
-                        }}
+                            const fileSize = e.target.files[0].size / 1024 / 1024
+                            if (fileSize < 2) {
+                              showErrorLess()
+                              return
+                            } 
+                            if (fileSize > 10) {
+                              showError()
+                              return
+                            } else {
+                              setImg8(URL.createObjectURL(e.target.files[0]))
+                              showSuccess()
+                            }
+                          }}
                       />
                       <label for="img8">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -403,19 +403,19 @@ function CollagesUno() {
                         accept="image/*"
                         id="img9"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
-                          if (fileSize < 2) {
-                            showErrorLess()
-                            return
-                          } 
-                          if (fileSize > 10) {
-                            showError()
-                            return
-                          } else {
-                            setImg9(URL.createObjectURL(e.target.files[0]))
-                            showSuccess()
-                          }
-                        }}
+                            const fileSize = e.target.files[0].size / 1024 / 1024
+                            if (fileSize < 2) {
+                              showErrorLess()
+                              return
+                            } 
+                            if (fileSize > 10) {
+                              showError()
+                              return
+                            } else {
+                              setImg9(URL.createObjectURL(e.target.files[0]))
+                              showSuccess()
+                            }
+                          }}
                       />
                       <label for="img9">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -441,19 +441,19 @@ function CollagesUno() {
                         accept="image/*"
                         id="img10"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
-                          if (fileSize < 2) {
-                            showErrorLess()
-                            return
-                          } 
-                          if (fileSize > 10) {
-                            showError()
-                            return
-                          } else {
-                            setImg10(URL.createObjectURL(e.target.files[0]))
-                            showSuccess()
-                          }
-                        }}
+                            const fileSize = e.target.files[0].size / 1024 / 1024
+                            if (fileSize < 2) {
+                              showErrorLess()
+                              return
+                            } 
+                            if (fileSize > 10) {
+                              showError()
+                              return
+                            } else {
+                              setImg10(URL.createObjectURL(e.target.files[0]))
+                              showSuccess()
+                            }
+                          }}
                       />
                       <label for="img10">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -478,19 +478,19 @@ function CollagesUno() {
                         accept="image/*"
                         id="img11"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
-                          if (fileSize < 2) {
-                            showErrorLess()
-                            return
-                          } 
-                          if (fileSize > 10) {
-                            showError()
-                            return
-                          } else {
-                            setImg11(URL.createObjectURL(e.target.files[0]))
-                            showSuccess()
-                          }
-                        }}
+                            const fileSize = e.target.files[0].size / 1024 / 1024
+                            if (fileSize < 2) {
+                              showErrorLess()
+                              return
+                            } 
+                            if (fileSize > 10) {
+                              showError()
+                              return
+                            } else {
+                              setImg11(URL.createObjectURL(e.target.files[0]))
+                              showSuccess()
+                            }
+                          }}
                       />
                       <label for="img11">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -514,7 +514,7 @@ function CollagesUno() {
                         accept="image/*"
                         id="img12"
                         onChange={(e) => {
-                          const fileSize = e.target.files[0].size / 1024 / 1024
+                            const fileSize = e.target.files[0].size / 1024 / 1024
                             if (fileSize < 2) {
                               showErrorLess()
                               return
@@ -526,7 +526,7 @@ function CollagesUno() {
                               setImg12(URL.createObjectURL(e.target.files[0]))
                               showSuccess()
                             }
-                        }}
+                          }}
                       />
                       <label for="img12">REEMPLAZAR IMAGEN</label>
                     </div>
@@ -535,7 +535,7 @@ function CollagesUno() {
                 </div>
               </div>
 
-              <div className="collages-text-uno">
+              <div className="aventura-dos-content">
                 <div
                   className="span"
                   id="3"
@@ -568,8 +568,11 @@ function CollagesUno() {
           )
         })
       )}
+   
+
     </div>
   )
 }
 
-export default CollagesUno
+export default AventuraDos
+

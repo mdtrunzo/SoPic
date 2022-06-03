@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'AlegreyaBold';
+    src: local('Alegreya-Bold'), url(../../../fonts/Alegreya-Bold.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'AlegreyaRegular';
+    src: local('Alegreya-Regular'), url(../../../fonts/Alegreya-Regular.ttf) format('truetype');
+  }
+@font-face {
+    font-family: 'ApexNewLight';
+    src: local('ApexNewLight'), url(../../../fonts/ApexNewLight.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'ApexNewBold';
+    src: local('ApexNewBold'), url(../../../fonts/ApexNewBold.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'Bacalisties';
+    src: local('Bacalisties'), url(../../../fonts/Bacalisties.ttf) format('trutype');
+  }
+  @font-face {
+    font-family: 'BarlowBold';
+    src: local('Barlow-Bold'), url(../../../fonts/Barlow-Bold.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'BarlowLight';
+    src: local('Barlow-Ligh'), url(../../../fonts/Barlow-Light.otf) format('trutype');
+  }
+  @font-face {
+    font-family: 'BellMTRegular';
+    src: local('BELL'), url(../../../fonts/BELL.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'BellMTBold';
+    src: local('BELLB'), url(../../../fonts/BELLB.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'Bodoni';
+    src: local('Bodoni72OS'), url(../../../fonts/Bodoni72OS.ttc) format('truetype');
+  }
+  @font-face {
+    font-family: 'BolliviaRosillaDemo';
+    src: local('BolliviaRosillaDemo'), url(../../../fonts/BolliviaRosillaDemo.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Gothic';
+    src: local('GOTHIC'), url(../../../fonts/GOTHIC.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'GothicBold';
+    src: local('GOTHICB'), url(../../../fonts/GOTHICB.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'OpenSans-Light';
+    src: local('OpenSans-Light'), url(../../../fonts/OpenSans-Light.ttf) format('truetype');
+  }
+.kids-img{
+    height: 420px;
+}
+.icons-kids{
+    display: flex;
+    justify-content: center;
+    color:#A48B7C;
+    text-align: center;
+}
+.icon-kids{
+    display: flex;
+    justify-content: center;
+}
+.icon-kids svg{
+    width: 10px;
+}
+.icon-kids > div{
+    font-size: 8px;
+}
+.kids-header .text > div{
+    font-family: 'Bacalisties', 'sans-serif';
+}
+.kids-header .span > div {
+    font-family: 'ApexNewBold', 'sans-serif';
+}
+.kids-dos-footer{
+  display: flex;
+  justify-content: space-around;
+  color:#527F89;
+  padding: 10px 40px;
+}
+
+.kids-dos-footer .mayuscula div{
+  font-size: 170px;
+  display: inline-block;
+  line-height: 140px;
+  font-family: 'BellMTBold', sans-serif;
+}
+.kids-dos-footer-body div{
+  font-family: 'BellMTBold', sans-serif;
+  width: 200px;
+}
+.kids-dos-footer-body div:nth-child(2){
+  font-size: 8px;
+  border-top: 1px solid #527F89;
+  border-bottom: 1px solid #527F89;
+  min-height: 10px;
+  padding: 5px 0;
+  font-family: 'ApexNewBold', sans-serif;
+}
+.kids-dos-footer-body div:first-child{
+  font-size: 30px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  line-height: 35px;
+}
+.kids-dos-footer-body div:last-child{
+font-size: 12px;
+padding-top: 3px;
+min-height: 100px;
+}
+.kids-tres-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  color:#f4abcc;
+  font-family: 'BellMTBold', sans-serif;
+}
+.kids-tres-footer-body-header{
+border:1px solid black;
+padding: 3px 50px;
+}
+.kids-tres-footer-body-header div{
+  padding: 0;
+  text-align: center;
+}
+.kids-tres-footer-body-header div:first-child{
+  font-size: 30px;
+}
+.kids-tres-footer-body-footer{
+  border:1px solid black;
+  border-top: none !important;
+  text-align: center;
+  position: relative;
+  top:-5px;
+  font-family: 'Alegreya-Bold', sans-serif;
+  font-size: 25px;
+}
+.kids-cuatro-footer{
+  display: flex;
+  width:334px;
+  margin-top: 20px;
+}
+.kids-cuatro-footer input[type="text"], .kids-cuatro-footer textarea{
+  font-size: 8px;
+}
+.kids-cuatro-footer textarea{
+  height: 90px;
+}
+.kids-cuatro-footer > div{
+  border:1px solid black;
+  border-left: none !important;
+}
+.kids-cuatro-footer > div:first-child{
+  width: 30%;
+}
+.kids-cuatro-footer > div:nth-child(2){
+  width: 70%;
+  border-right: none !important;
+}
+.kids-cuatro-footer > div:nth-child(2) > div:first-child{
+  font-size: 8px;
+  padding: 5px;
+}
+.kids-cuatro-footer > div:nth-child(2) > div:nth-child(2) {
+  font-size: 8px;
+  font-family: 'Gothic', sans-serif;
+}
+.kids-cuatro-footer-left{
+  font-size: 35px;
+  font-family: 'Alegreya-Regular', sans-serif;
+}
+.spotify-header{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #9D9D9D;
+}
+.spotify-header-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.spotify-header-top  div{
+  padding: 0;
+  margin: 0;
+}
+.spotify-header-bottom div{
+  padding: 0;
+  margin: 0;
+}
+.spotify-footer{
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
+}
+.input-range-spotify::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 80%;
+  left: 10%;
+  background-color: #9D9D9D;
+}
+.input-range-spotify::before{
+  content:'';
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #9D9D9D;
+  border-radius: 50%;
+  top:-30px;
+  bottom: 0;
+  left: -50%;
+  right: 0;
+  margin: auto;
+}
+.reproductor{
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.reproductor svg{
+  color:#9D9D9D;
+  font-size: 20px;
+}
+.reproductor svg:nth-child(3) {
+  font-size: 50px;
+}
+.song-name div{
+  font-family: 'ApexNewLight', sans-serif;
+  font-size: 22px;
+}
+.spotify-header-bottom div{
+  font-family: 'ApexNewBold', sans-serif;
+}

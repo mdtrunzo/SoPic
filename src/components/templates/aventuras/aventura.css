@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'AlegreyaBold';
+    src: local('Alegreya-Bold'), url(../../../fonts/Alegreya-Bold.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'AlegreyaRegular';
+    src: local('Alegreya-Regular'), url(../../../fonts/Alegreya-Regular.ttf) format('truetype');
+  }
+@font-face {
+    font-family: 'ApexNewLight';
+    src: local('ApexNewLight'), url(../../../fonts/ApexNewLight.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'ApexNewBold';
+    src: local('ApexNewBold'), url(../../../fonts/ApexNewBold.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'Bacalisties';
+    src: local('Bacalisties'), url(../../../fonts/Bacalisties.ttf) format('trutype');
+  }
+  @font-face {
+    font-family: 'BarlowBold';
+    src: local('Barlow-Bold'), url(../../../fonts/Barlow-Bold.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'BarlowLight';
+    src: local('Barlow-Ligh'), url(../../../fonts/Barlow-Light.otf) format('trutype');
+  }
+  @font-face {
+    font-family: 'BellMTRegular';
+    src: local('BELL'), url(../../../fonts/BELL.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'BellMTBold';
+    src: local('BELLB'), url(../../../fonts/BELLB.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'Bodoni';
+    src: local('Bodoni72OS'), url(../../../fonts/Bodoni72OS.ttc) format('truetype');
+  }
+  @font-face {
+    font-family: 'BolliviaRosillaDemo';
+    src: local('BolliviaRosillaDemo'), url(../../../fonts/BolliviaRosillaDemo.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Gothic';
+    src: local('GOTHIC'), url(../../../fonts/GOTHIC.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'GothicBold';
+    src: local('GOTHICB'), url(../../../fonts/GOTHICB.TTF) format('truetype');
+  }
+  @font-face {
+    font-family: 'OpenSans-Light';
+    src: local('OpenSans-Light'), url(../../../fonts/OpenSans-Light.ttf) format('truetype');
+  }
+.aventura-img{
+    height: 420px;
+}
+.aventura-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+}
+.aventura-content div{
+    padding: 0;
+    margin: 0;
+}
+.aventura-content > div:first-child{
+    font-family: 'Bodoni', sans-serif;
+    font-size: 50px;
+}
+.aventura-content input[type='text']:first-child{
+    font-size: 50px;
+    text-align: center;
+}
+.aventura-content > div:nth-child(2){
+    font-family: 'Bacalisties', sans-serif;
+    font-size: 30px;
+}
+.aventura-content > div:last-child {
+    font-family: 'ApexNewLight', sans-serif;
+}
+.aventura-dos-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.aventura-dos-content > div:first-child{
+    font-family: 'ApexNewBold', sans-serif;
+}
+.aventura-dos-content > div:nth-child(2) {
+    font-family: 'Bacalisties', sans-serif;
+}

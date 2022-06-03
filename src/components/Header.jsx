@@ -4,7 +4,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import ReplayIcon from '@mui/icons-material/Replay';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import Flip from 'react-reveal/Flip'
-import Avatar from './AvatarImage';
+// import Avatar from './AvatarImage';
 
 function Header({login}) {
         return (
@@ -42,7 +42,7 @@ function Header({login}) {
                     </div>
                 </ul>
                 </nav>
-               <Avatar />
+               {/* <Avatar /> */}
             </div>
         )
     }

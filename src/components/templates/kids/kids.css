@@ -239,6 +239,15 @@ padding: 3px 50px;
   font-family: 'ApexNewLight', sans-serif;
   font-size: 22px;
 }
+.song-name input{
+  text-align: center;
+  font-size: 22px !important;
+  padding: 0 !important;
+}
 .spotify-header-bottom div{
   font-family: 'ApexNewBold', sans-serif;
+}
+.spotify-header-bottom input{
+  text-align: center;
+  padding: 0 !important;
 }

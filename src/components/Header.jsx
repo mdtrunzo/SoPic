@@ -4,7 +4,6 @@ import SaveIcon from '@mui/icons-material/Save';
 import ReplayIcon from '@mui/icons-material/Replay';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import Flip from 'react-reveal/Flip'
-import { Link } from 'react-router-dom'
 // import Avatar from './AvatarImage';
 
 
@@ -38,12 +37,12 @@ function Header({login}) {
                       <ReplayIcon />
                       <li>DESHACER</li>
                     </div>
-                    <Link to='https://testing.ribaslegales.com.ar/index.php/carrito/'>
+                    <a href='https://testing.ribaslegales.com.ar/index.php/carrito/'>
                     <div className="iconos-menu">
                       <ShoppingBagIcon />
                       <li>TERMINAR</li>
                     </div>
-                    </Link>
+                    </a>
                    
                 </ul>
                 </nav>

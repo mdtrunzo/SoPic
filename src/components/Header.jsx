@@ -7,6 +7,7 @@ import Flip from 'react-reveal/Flip'
 import { Link } from 'react-router-dom'
 // import Avatar from './AvatarImage';
 
+
 function Header({login}) {
         return (
             <div className="header">
